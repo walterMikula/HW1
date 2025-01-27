@@ -180,8 +180,15 @@ public class MikulaHW1 {
             Stack<Character> stack = new Stack<>();
             input = input.toLowerCase().replaceAll("\\s+", "");
 
-            // Your CODE GOES HERE
-            return false;
+            for (char ch : input.toCharArray()){
+                stack.push(ch);
+            }
+            for (char ch : input.toCharArray()){
+                if stack.pop() !=ch){
+                    return false;}
+            }
+            
+            return true;
         }
 
 
@@ -201,9 +208,25 @@ public class MikulaHW1 {
          * completed, place them all back in teh original stack.
          */
         public static int findLargestK(Stack<Integer> stack, int k) {
+            Stack<Integer> tempStack = new stack<>();
+            int largestIndex = -1;
+            int currentIndex = stack.size() - 1;
 
-            // YOUR CODE GOES HERE
-            return -1;
+            // have to travel through the stack
+            while (!stack.isEmpty()){
+                int element = stack.pop();
+                tempStack.push(element);
+
+                if (element == k && currentIndex > largestIndex){
+                    largestIndex = currentIndex
+                        }
+                currentIndex--;
+            }
+                while (!tempStack.isEmpty()){
+                    stack.push(tempStack.pop());
+                }
+            
+            return largestIndex;
         }
 
     }  // End class Stacks
