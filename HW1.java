@@ -1,6 +1,6 @@
 
 /*
- * *** PLACE YOUR NAME / SECTION  HERE ***
+ * ***Walter Mikula / Section 002 ***
  *
  * Homework # 1 (Programming Assignment). This Java class defines some basic
  * manipulation operations on Linked-Lists and Stacks.
@@ -13,7 +13,7 @@
 
 import java.util.Stack;
 
-public class HW1 {
+public class MikulaHW1 {
 
     /*
      * Class LinkedList
@@ -86,6 +86,19 @@ public class HW1 {
          * found in the linked-list that is less than thr parameter value passed.
          */
         public void removeElementsLT ( int ltValue ) {
+            Node current = head;
+            while (current != null && current.data < ltValue) {
+                head = current.next;
+                current = head;
+            }
+            while (current != null && current.next != null){
+                if (current.next.data <ltValue){
+                    current.next=current.next.next;
+                }else{
+                    current = current.next;
+                }
+            }
+        }
 
             // YOUR CODE GOES HERE
 
@@ -99,13 +112,20 @@ public class HW1 {
          */
 
         public void removeElement ( int value ) {
-
-            // YOUR CODE GOES HERE
-
-            return;
+            node current = head;
+            while (current != null && current.data == value) {
+                head = current.next;
+                current = head;
+            }
+            while (current != null && current.next != null){
+                if (current.next.data == value) {
+                    current.next = current.next.next;
+                }else{
+                    current = current.next;
+                }
+            }
         }
-
-
+    
         /*
          * Method toString() - this is a helper method for printing / constructing
          * a string object from the linked-list.
@@ -219,7 +239,7 @@ public class HW1 {
         */
 
         // RETURN THE CORRECT OPTION NUMBER LISTED ABOVE
-        return -1;
+        return 3;
     }
 
 
@@ -240,7 +260,7 @@ public class HW1 {
          */
 
         // RETURN THE CORRECT OPTION LISTED ABOVE
-        return -1;
+        return 2;
     }
 
 }
