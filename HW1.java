@@ -86,21 +86,19 @@ public class MikulaHW1 {
          * found in the linked-list that is less than thr parameter value passed.
          */
         public void removeElementsLT ( int ltValue ) {
-            Node current = head;
-            while (current != null && current.data < ltValue) {
-                head = current.next;
-                current = head;
+            Node current = head; //current node is go through the linked-list
+            while (current != null && current.data < ltValue) { 
+                head = current.next;// moves the nodes at the beginning of the list if they are less than the value of ltValue
+                current = head; // updates the current node
             }
-            while (current != null && current.next != null){
-                if (current.next.data <ltValue){
+            while (current != null && current.next != null){// continues scanning the linked-list
+                if (current.next.data <ltValue){ 
                     current.next=current.next.next;
                 }else{
-                    current = current.next;
+                    current = current.next;// moves the current node forward
                 }
             }
         }
-
-            // YOUR CODE GOES HERE
 
             return;
         }
@@ -112,9 +110,9 @@ public class MikulaHW1 {
          */
 
         public void removeElement ( int value ) {
-            node current = head;
-            while (current != null && current.data == value) {
-                head = current.next;
+            node current = head;// set current to the head node
+            while (current != null && current.data == value) { // while the new current, head is not null and current.data is equal to a value then do this
+                head = current.next;// move the head to the next node and update the value for current 
                 current = head;
             }
             while (current != null && current.next != null){
@@ -178,17 +176,17 @@ public class MikulaHW1 {
         public static boolean isPalindrome(String input) {
 
             Stack<Character> stack = new Stack<>();
-            input = input.toLowerCase().replaceAll("\\s+", "");
+            input = input.toLowerCase().replaceAll("\\s+", "");// formats the input to lowercase and with no spaces to check if its a palindrome
 
-            for (char ch : input.toCharArray()){
+            for (char ch : input.toCharArray()){// pushes all charactres into the stack
                 stack.push(ch);
             }
             for (char ch : input.toCharArray()){
-                if stack.pop() !=ch){
-                    return false;}
+                if stack.pop() !=ch){// pops the characters one after another to compare them with the origional order to determine if its a palindrome
+                    return false;} // returns false if not a palindrome
             }
             
-            return true;
+            return true;// should return true if the input is a palindrome
         }
 
 
@@ -208,25 +206,25 @@ public class MikulaHW1 {
          * completed, place them all back in teh original stack.
          */
         public static int findLargestK(Stack<Integer> stack, int k) {
-            Stack<Integer> tempStack = new stack<>();
+            Stack<Integer> tempStack = new Stack<>();
             int largestIndex = -1;
             int currentIndex = stack.size() - 1;
 
             // have to travel through the stack
             while (!stack.isEmpty()){
                 int element = stack.pop();
-                tempStack.push(element);
+                tempStack.push(element);// pops each element and moves them into a tempStack
 
                 if (element == k && currentIndex > largestIndex){
                     largestIndex = currentIndex
                         }
-                currentIndex--;
+                currentIndex--;// updates the index
             }
                 while (!tempStack.isEmpty()){
-                    stack.push(tempStack.pop());
+                    stack.push(tempStack.pop());// restores the origional stack
                 }
             
-            return largestIndex;
+            return largestIndex;// returns the largest index that k was found at
         }
 
     }  // End class Stacks
