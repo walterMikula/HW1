@@ -13,7 +13,7 @@
 
 import java.util.Stack;
 
-public class MikulaHW1 {
+public class HW1 {
 
     /*
      * Class LinkedList
