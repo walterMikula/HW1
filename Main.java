@@ -1,8 +1,8 @@
 /*********************************************************
  *
- * Place your name / section number in the 'MikulaHW1.java' file
+ * Place your name / section number in the 'HW1.java' file
  * (NOT this file). This main routine is a driver routine for
- * testing the methods in the file 'MikulaHW1.java'.
+ * testing the methods in the file 'HW1.java'.
  *
  *********************************************************/
 
@@ -22,7 +22,7 @@ public class Main {
          ***************************************/
 
 
-        MikulaHW1.LinkedList list1 = new MikulaHW1.LinkedList();
+        HW1.LinkedList list1 = new HW1.LinkedList();
 
         // Insert the values
         list1.sortedInsert(1);
@@ -60,7 +60,7 @@ public class Main {
         }
 
         // Additional link-list tests
-        MikulaHW1.LinkedList list2 = new MikulaHW1.LinkedList();
+        HW1.LinkedList list2 = new HW1.LinkedList();
 
         list2.sortedInsert(1003);
         list2.sortedInsert(4004);
@@ -112,22 +112,22 @@ public class Main {
 
         // System.out.println("Starting isPalindrone testing ...");
 
-        if ( ! MikulaHW1.Stacks.isPalindrome("Was it a car or a cat I saw")) {
+        if ( ! HW1.Stacks.isPalindrome("Was it a car or a cat I saw")) {
             System.out.println("ERROR 8: ispalindrome test failed");
             errorFlag = true;
         }
 
-        if ( ! errorFlag && ! MikulaHW1.Stacks.isPalindrome("Race Car")) {
+        if ( ! errorFlag && ! HW1.Stacks.isPalindrome("Race Car")) {
             System.out.println("ERROR 9: ispalindrome test failed");
             errorFlag = true;
         }
 
-        if ( ! errorFlag && ! MikulaHW1.Stacks.isPalindrome("Never odd or even")) {
+        if ( ! errorFlag && ! HW1.Stacks.isPalindrome("Never odd or even")) {
             System.out.println("ERROR 10: ispalindrome test failed");
             errorFlag = true;
         }
 
-        if ( ! errorFlag && MikulaHW1.Stacks.isPalindrome("civic2")) {
+        if ( ! errorFlag && HW1.Stacks.isPalindrome("civic2")) {
             System.out.println("ERROR 11: ispalindrome test failed");
             errorFlag = true;
         }
@@ -159,17 +159,17 @@ public class Main {
 
         // System.out.println(myStack);
 
-        if ( MikulaHW1.Stacks.findLargestK(myStack, 1) != 4) {
+        if ( HW1.Stacks.findLargestK(myStack, 1) != 4) {
             System.out.println("ERROR 12: findLargestk test failed");
             errorFlag = true;
         }
 
-        if ( ! errorFlag && MikulaHW1.Stacks.findLargestK(myStack, 5) != 0) {
+        if ( ! errorFlag && HW1.Stacks.findLargestK(myStack, 5) != 0) {
             System.out.println("ERROR 13: findLargestk test failed");
             errorFlag = true;
         }
 
-        if ( ! errorFlag && MikulaHW1.Stacks.findLargestK(myStack, 4) != 3) {
+        if ( ! errorFlag && HW1.Stacks.findLargestK(myStack, 4) != 3) {
             System.out.println("ERROR 14: findLargestk test failed");
             errorFlag = true;
         }
@@ -192,7 +192,7 @@ public class Main {
 
         System.out.println("\nThe algorithm analysis testing skipped (12 points each, total 24 points) ...");
 
-        if ( MikulaHW1.algorithmAnalysis1(5,5) != 3 ) {
+        if ( HW1.algorithmAnalysis1(5,5) != 3 ) {
             System.out.println("ERROR 15: algorithmAnalysis1 test failed");
             errorFlag = true;
         }
@@ -202,7 +202,7 @@ public class Main {
         else
             errorFlag = false;
 
-        if ( MikulaHW1.algorithmAnalysis2(2) != 2 ) {
+        if ( HW1.algorithmAnalysis2(2) != 2 ) {
             System.out.println("ERROR 16: algorithmAnalysis1 test failed");
             errorFlag = true;
         }
