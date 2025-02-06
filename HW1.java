@@ -101,7 +101,7 @@ public class HW1 {
         }
 
             return;
-        }
+    
 
 
         /*
@@ -110,7 +110,7 @@ public class HW1 {
          */
 
         public void removeElement ( int value ) {
-            node current = head;// set current to the head node
+            Node current = head;// set current to the head node
             while (current != null && current.data == value) { // while the new current, head is not null and current.data is equal to a value then do this
                 head = current.next;// move the head to the next node and update the value for current 
                 current = head;
@@ -182,7 +182,7 @@ public class HW1 {
                 stack.push(ch);
             }
             for (char ch : input.toCharArray()){
-                if stack.pop() !=ch){// pops the characters one after another to compare them with the origional order to determine if its a palindrome
+                if (stack.pop() !=ch){// pops the characters one after another to compare them with the origional order to determine if its a palindrome
                     return false;} // returns false if not a palindrome
             }
             
@@ -216,7 +216,7 @@ public class HW1 {
                 tempStack.push(element);// pops each element and moves them into a tempStack
 
                 if (element == k && currentIndex > largestIndex){
-                    largestIndex = currentIndex
+                    largestIndex = currentIndex;
                         }
                 currentIndex--;// updates the index
             }
